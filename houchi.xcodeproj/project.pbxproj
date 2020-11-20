@@ -13,6 +13,7 @@
 		355BF66E25555FDB00996A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355BF66C25555FDB00996A86 /* Main.storyboard */; };
 		355BF67025555FDE00996A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355BF66F25555FDE00996A86 /* Assets.xcassets */; };
 		355BF67325555FDE00996A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355BF67125555FDE00996A86 /* LaunchScreen.storyboard */; };
+		355BF67C2567D19D00996A86 /* sjis_sp_setofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 355BF67B2567D11600996A86 /* sjis_sp_setofont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		355BF66F25555FDE00996A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		355BF67225555FDE00996A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		355BF67425555FDE00996A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355BF67B2567D11600996A86 /* sjis_sp_setofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sjis_sp_setofont.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		355BF66525555FDB00996A86 /* houchi */ = {
 			isa = PBXGroup;
 			children = (
+				355BF67A2567CC6800996A86 /* font */,
 				355BF66625555FDB00996A86 /* AppDelegate.swift */,
 				355BF66825555FDB00996A86 /* SceneDelegate.swift */,
 				355BF66A25555FDB00996A86 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				355BF67425555FDE00996A86 /* Info.plist */,
 			);
 			path = houchi;
+			sourceTree = "<group>";
+		};
+		355BF67A2567CC6800996A86 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				355BF67B2567D11600996A86 /* sjis_sp_setofont.ttf */,
+			);
+			path = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355BF67C2567D19D00996A86 /* sjis_sp_setofont.ttf in Resources */,
 				355BF67325555FDE00996A86 /* LaunchScreen.storyboard in Resources */,
 				355BF67025555FDE00996A86 /* Assets.xcassets in Resources */,
 				355BF66E25555FDB00996A86 /* Main.storyboard in Resources */,
