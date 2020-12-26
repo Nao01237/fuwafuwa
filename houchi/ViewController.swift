@@ -9,17 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var number: Int = 0
+    var shozikinn: Int = 0
     var level: Int = 1
+    var maibilyou: Int = 3
     var timer: Timer?
     @IBOutlet var a: UILabel!
-      @IBOutlet var b: UILabel!
-      @IBOutlet var c: UILabel!
-      @IBOutlet var d: UILabel!
-      @IBOutlet var e: UILabel!
-      @IBOutlet var f: UILabel!
+    @IBOutlet var b: UILabel!
+    @IBOutlet var c: UILabel!
+    @IBOutlet var d: UILabel!
+    @IBOutlet var e: UILabel!
+    @IBOutlet var f: UILabel!
+    @IBOutlet var g: UILabel!
     
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,32 +31,39 @@ class ViewController: UIViewController {
             selector: #selector(self.count),
             userInfo: nil,
             repeats: true     )
+        a.text = "毎秒  \(String(maibilyou))"
+        g.text = "\(String(maibilyou * 3))円"
         
     }
     @objc func count() {
-        if number >= 10 {
+        if shozikinn >= 100000 {
             timer?.invalidate()
         } else {
-        number = number + 1
-        d.text = "\(String(number))円"
+            shozikinn = shozikinn + maibilyou
+            d.text = "\(String(shozikinn))円"
         }
         
+        
     }
-       @IBAction func levelUp() {
-        if number > 5 {
-            number = number - 5
-            level  = level + 1
+    @IBAction func levelUp() {
+        if shozikinn >  maibilyou * 3 {
+            shozikinn = shozikinn - maibilyou
+            level = level + 1
+            maibilyou = (maibilyou + 10) * 3
             f.text = String(level)
+            g.text = "\(String(maibilyou * 3))円"
+            a.text = "毎秒 　\(String(maibilyou))"
             
-
+            
+            
             
         }
-            
-            
-        }
-    
-    
+        
+        
     }
+    
+    
+}
 
 
 
