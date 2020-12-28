@@ -32,11 +32,11 @@ class ViewController: UIViewController {
             userInfo: nil,
             repeats: true     )
         a.text = "毎秒  \(String(maibilyou))"
-        g.text = "\(String(maibilyou * 3))円"
+        g.text = "\(String(maibilyou * 25))円"
         
     }
     @objc func count() {
-        if shozikinn >= 100000 {
+        if shozikinn >= 10000000 {
             timer?.invalidate()
         } else {
             shozikinn = shozikinn + maibilyou
@@ -46,12 +46,12 @@ class ViewController: UIViewController {
         
     }
     @IBAction func levelUp() {
-        if shozikinn >  maibilyou * 3 {
+        if shozikinn >  maibilyou * 25 {
             shozikinn = shozikinn - maibilyou
             level = level + 1
-            maibilyou = (maibilyou + 10) * 3
+            maibilyou = (maibilyou + 10) * 2
             f.text = String(level)
-            g.text = "\(String(maibilyou * 3))円"
+            g.text = "\(String(maibilyou * 25))円"
             a.text = "毎秒 　\(String(maibilyou))"
             
             
