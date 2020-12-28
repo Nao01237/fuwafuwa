@@ -305,21 +305,6 @@
             <point key="canvasLocation" x="2460.8695652173915" y="-364.28571428571428"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="IE7-Si-za8">
-            <objects>
-                <viewController id="i5i-i5-v4M" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Xe-Eh-Ur1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="7vv-cg-1yy"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LeU-yA-m5k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-29021" y="-3409"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="PVj-KV-QAX">
             <objects>
                 <viewController id="a3t-of-pTK" sceneMemberID="viewController">

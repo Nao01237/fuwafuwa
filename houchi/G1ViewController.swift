@@ -19,13 +19,13 @@ class G1ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        number = Int.random(in: 0...9)
+        number = Int.random(in: 0...2)
         
-            if number == 9 {
+            if number == 0 {
                 g1.image = UIImage(named: "kutu1")
                 L1.text = "妖精の靴"
                
-            } else if number == 8 {
+            } else if number == 1 {
                 g1.image = UIImage(named: "kazari1")
                L1.text = "新緑のツタの冠"
             } else {
@@ -33,6 +33,10 @@ class G1ViewController: UIViewController {
                L1.text = "魔法の絆創膏"
                 
     }
+
+        }
+    @IBAction func back() {
+              self.dismiss(animated: true, completion: nil)
      
 
     /*

@@ -108,4 +108,7 @@ class G11ViewController: UIViewController {
     */
 
 }
+    @IBAction func back() {
+               self.dismiss(animated: true, completion: nil)
+}
 }

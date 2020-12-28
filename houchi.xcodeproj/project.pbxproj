@@ -10,13 +10,13 @@
 		355BF66725555FDB00996A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BF66625555FDB00996A86 /* AppDelegate.swift */; };
 		355BF66925555FDB00996A86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BF66825555FDB00996A86 /* SceneDelegate.swift */; };
 		355BF66B25555FDB00996A86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BF66A25555FDB00996A86 /* ViewController.swift */; };
-		355BF66E25555FDB00996A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355BF66C25555FDB00996A86 /* Main.storyboard */; };
 		355BF67325555FDE00996A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355BF67125555FDE00996A86 /* LaunchScreen.storyboard */; };
 		355BF67C2567D19D00996A86 /* sjis_sp_setofont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 355BF67B2567D11600996A86 /* sjis_sp_setofont.ttf */; };
 		355BF67E257A3B5E00996A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355BF67D257A3B5E00996A86 /* Assets.xcassets */; };
 		355BF6A825982D4C00996A86 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BF6A725982D4C00996A86 /* ViewCell.swift */; };
 		355BF6AA2598501A00996A86 /* G1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BF6A92598501A00996A86 /* G1ViewController.swift */; };
 		355BF6AC25996F1000996A86 /* G11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BF6AB25996F1000996A86 /* G11ViewController.swift */; };
+		355BF6AE2599B97F00996A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355BF6AD2599B97F00996A86 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,6 @@
 		355BF66625555FDB00996A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		355BF66825555FDB00996A86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		355BF66A25555FDB00996A86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		355BF66D25555FDB00996A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		355BF67225555FDE00996A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		355BF67425555FDE00996A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		355BF67B2567D11600996A86 /* sjis_sp_setofont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sjis_sp_setofont.ttf; sourceTree = "<group>"; };
@@ -32,6 +31,7 @@
 		355BF6A725982D4C00996A86 /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		355BF6A92598501A00996A86 /* G1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G1ViewController.swift; sourceTree = "<group>"; };
 		355BF6AB25996F1000996A86 /* G11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G11ViewController.swift; sourceTree = "<group>"; };
+		355BF6AD2599B97F00996A86 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 				355BF66625555FDB00996A86 /* AppDelegate.swift */,
 				355BF66825555FDB00996A86 /* SceneDelegate.swift */,
 				355BF66A25555FDB00996A86 /* ViewController.swift */,
-				355BF66C25555FDB00996A86 /* Main.storyboard */,
+				355BF6AD2599B97F00996A86 /* Main.storyboard */,
 				355BF67125555FDE00996A86 /* LaunchScreen.storyboard */,
 				355BF67425555FDE00996A86 /* Info.plist */,
 				355BF6A725982D4C00996A86 /* ViewCell.swift */,
@@ -148,7 +148,7 @@
 				355BF67C2567D19D00996A86 /* sjis_sp_setofont.ttf in Resources */,
 				355BF67325555FDE00996A86 /* LaunchScreen.storyboard in Resources */,
 				355BF67E257A3B5E00996A86 /* Assets.xcassets in Resources */,
-				355BF66E25555FDB00996A86 /* Main.storyboard in Resources */,
+				355BF6AE2599B97F00996A86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,14 +171,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		355BF66C25555FDB00996A86 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				355BF66D25555FDB00996A86 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		355BF67125555FDE00996A86 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
