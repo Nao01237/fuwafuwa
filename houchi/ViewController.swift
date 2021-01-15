@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var shozikinn: Int = 0
     var level: Int = 1
     var maibilyou: Int = 3
     var timer: Timer?
@@ -20,11 +19,11 @@ class ViewController: UIViewController {
     @IBOutlet var e: UILabel!
     @IBOutlet var f: UILabel!
     @IBOutlet var g: UILabel!
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        // UserDefaultsに所持金を保存するために初期化
+        UserDefaults.standard.set(0, forKey: "shozikinn")
         timer = Timer.scheduledTimer(
             timeInterval: 1,
             target: self,
@@ -35,34 +34,33 @@ class ViewController: UIViewController {
         g.text = "\(String(maibilyou * 25))円"
         
     }
+    
     @objc func count() {
+        // UserDefaultsから所持金を取り出す
+        var shozikinn = UserDefaults.standard.object(forKey: "shozikinn") as! Int
         if shozikinn >= 10000000 {
             timer?.invalidate()
         } else {
+            // 所持金をプラスして保存
             shozikinn = shozikinn + maibilyou
+            UserDefaults.standard.set(shozikinn, forKey: "shozikinn")
             d.text = "\(String(shozikinn))円"
         }
-        
-        
     }
+    
     @IBAction func levelUp() {
+        var shozikinn = UserDefaults.standard.object(forKey: "shozikinn") as! Int
         if shozikinn >  maibilyou * 25 {
+            // 所持金を引いて保存
             shozikinn = shozikinn - maibilyou
+            UserDefaults.standard.set(shozikinn, forKey: "shozikinn")
             level = level + 1
             maibilyou = (maibilyou + 10) * 2
             f.text = String(level)
             g.text = "\(String(maibilyou * 25))円"
             a.text = "毎秒 　\(String(maibilyou))"
-            
-            
-            
-            
         }
-        
-        
     }
-    
-    
 }
 
 

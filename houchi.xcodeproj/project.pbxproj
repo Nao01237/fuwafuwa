@@ -17,6 +17,7 @@
 		355BF6AA2598501A00996A86 /* G1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BF6A92598501A00996A86 /* G1ViewController.swift */; };
 		355BF6AC25996F1000996A86 /* G11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BF6AB25996F1000996A86 /* G11ViewController.swift */; };
 		355BF6AE2599B97F00996A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355BF6AD2599B97F00996A86 /* Main.storyboard */; };
+		35D522E225B1A4180057BB9B /* fukubukuroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D522E125B1A4180057BB9B /* fukubukuroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		355BF6A92598501A00996A86 /* G1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G1ViewController.swift; sourceTree = "<group>"; };
 		355BF6AB25996F1000996A86 /* G11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G11ViewController.swift; sourceTree = "<group>"; };
 		355BF6AD2599B97F00996A86 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		35D522E125B1A4180057BB9B /* fukubukuroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fukubukuroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				355BF6A725982D4C00996A86 /* ViewCell.swift */,
 				355BF6A92598501A00996A86 /* G1ViewController.swift */,
 				355BF6AB25996F1000996A86 /* G11ViewController.swift */,
+				35D522E125B1A4180057BB9B /* fukubukuroViewController.swift */,
 			);
 			path = houchi;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			files = (
 				355BF6A825982D4C00996A86 /* ViewCell.swift in Sources */,
 				355BF6AA2598501A00996A86 /* G1ViewController.swift in Sources */,
+				35D522E225B1A4180057BB9B /* fukubukuroViewController.swift in Sources */,
 				355BF66B25555FDB00996A86 /* ViewController.swift in Sources */,
 				355BF66725555FDB00996A86 /* AppDelegate.swift in Sources */,
 				355BF6AC25996F1000996A86 /* G11ViewController.swift in Sources */,
