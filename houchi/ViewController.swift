@@ -56,6 +56,7 @@ class ViewController: UIViewController {
             UserDefaults.standard.set(shozikinn, forKey: "shozikinn")
             level = level + 1
             maibilyou = (maibilyou + 10) * 2
+            UserDefaults.standard.set(level, forKey: "level")
             f.text = String(level)
             g.text = "\(String(maibilyou * 25))円"
             a.text = "毎秒 　\(String(maibilyou))"
