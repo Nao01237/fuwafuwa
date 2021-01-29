@@ -24,12 +24,14 @@ var shozikinn = UserDefaults.standard.object(forKey: "shozikinn") as! Int
     @IBAction func ONE() {
     // 所持金を取り出す
         var shozikinn = UserDefaults.standard.integer(forKey: "shozikinn") 
-     if shozikinn >  10000 {
+     if shozikinn >  100 {
     // 所持金から金額を引く
-        shozikinn = shozikinn - 100000
+        shozikinn = shozikinn - 100
         kingaku.text = "\(String(shozikinn))円"
     // 引いた金額を保存する
         UserDefaults.standard.set(shozikinn, forKey: "shozikinn")
+          
+        performSegue(withIdentifier: "1", sender: nil)
         
         
     }
@@ -38,10 +40,12 @@ var shozikinn = UserDefaults.standard.object(forKey: "shozikinn") as! Int
     
     @IBAction func ELEVEN() {
          var shozikinn = UserDefaults.standard.integer(forKey: "shozikinn")
-        if shozikinn >  100000 {
-        shozikinn = shozikinn - 1000000
+        if shozikinn >  1000 {
+        shozikinn = shozikinn - 1000
         kingaku.text = "\(String(shozikinn))円"
         UserDefaults.standard.set(shozikinn, forKey: "shozikinn")
+            
+            performSegue(withIdentifier: "11", sender: nil)
     }
 
     /*
@@ -53,6 +57,7 @@ var shozikinn = UserDefaults.standard.object(forKey: "shozikinn") as! Int
         // Pass the selected object to the new view controller.
     }
     */
+    }
     @IBAction func back1() {
     self.dismiss(animated: true, completion: nil)
 }

@@ -60,7 +60,6 @@
                                 </state>
                                 <connections>
                                     <action selector="ELEVEN" destination="qQn-KN-mHp" eventType="touchUpInside" id="jjp-o6-QLi"/>
-                                    <segue destination="rva-il-FCb" kind="show" id="xif-lp-MTg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="福袋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0s6-2y-0eM">
@@ -87,7 +86,6 @@
                                 </state>
                                 <connections>
                                     <action selector="ONE" destination="qQn-KN-mHp" eventType="touchUpInside" id="dhy-IM-8ti"/>
-                                    <segue destination="b0a-n8-b9d" kind="show" id="1Bm-LL-FNV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="所持金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21L-53-7wQ">
@@ -112,6 +110,20 @@
                                     <action selector="back1" destination="qQn-KN-mHp" eventType="touchUpInside" id="A7G-51-SZl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1500円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pja-uM-jsZ">
+                                <rect key="frame" x="107" y="485" width="105" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SetoFontSP_sjis" family="SetoFontSP_sjis" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15000円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eX-bs-8DQ">
+                                <rect key="frame" x="107" y="669" width="123" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SetoFontSP_sjis" family="SetoFontSP_sjis" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="vNw-6k-w3b"/>
@@ -121,6 +133,8 @@
                         <outlet property="eleven" destination="xCX-bx-29n" id="2E5-Vs-9C8"/>
                         <outlet property="kingaku" destination="Qer-Ym-H0J" id="RMP-ub-lBt"/>
                         <outlet property="one" destination="XNr-sJ-Ywm" id="AOz-kJ-DU8"/>
+                        <segue destination="b0a-n8-b9d" kind="presentation" identifier="1" id="WyR-tH-cWS"/>
+                        <segue destination="rva-il-FCb" kind="presentation" identifier="11" id="zKn-ic-lE6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZC-aE-KXz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
