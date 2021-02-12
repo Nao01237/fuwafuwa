@@ -18,6 +18,7 @@
 		355BF6AC25996F1000996A86 /* G11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BF6AB25996F1000996A86 /* G11ViewController.swift */; };
 		355BF6AE2599B97F00996A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355BF6AD2599B97F00996A86 /* Main.storyboard */; };
 		35D522E225B1A4180057BB9B /* fukubukuroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D522E125B1A4180057BB9B /* fukubukuroViewController.swift */; };
+		E9749627A147B663F4D3C3E2 /* Pods_houchi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D0835D911FD7EAC0D0271A /* Pods_houchi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		355BF6AB25996F1000996A86 /* G11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G11ViewController.swift; sourceTree = "<group>"; };
 		355BF6AD2599B97F00996A86 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		35D522E125B1A4180057BB9B /* fukubukuroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fukubukuroViewController.swift; sourceTree = "<group>"; };
+		92058D8DAAD8BFA6BB05A063 /* Pods-houchi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-houchi.release.xcconfig"; path = "Target Support Files/Pods-houchi/Pods-houchi.release.xcconfig"; sourceTree = "<group>"; };
+		DF81F49EB4A862777C46268E /* Pods-houchi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-houchi.debug.xcconfig"; path = "Target Support Files/Pods-houchi/Pods-houchi.debug.xcconfig"; sourceTree = "<group>"; };
+		F2D0835D911FD7EAC0D0271A /* Pods_houchi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_houchi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9749627A147B663F4D3C3E2 /* Pods_houchi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				355BF66525555FDB00996A86 /* houchi */,
 				355BF66425555FDB00996A86 /* Products */,
+				CB9A81E901462ECD2D33D6CC /* Pods */,
+				4C65347CF96ACCD129409D6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +97,24 @@
 			path = font;
 			sourceTree = "<group>";
 		};
+		4C65347CF96ACCD129409D6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2D0835D911FD7EAC0D0271A /* Pods_houchi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB9A81E901462ECD2D33D6CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF81F49EB4A862777C46268E /* Pods-houchi.debug.xcconfig */,
+				92058D8DAAD8BFA6BB05A063 /* Pods-houchi.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 355BF67725555FDE00996A86 /* Build configuration list for PBXNativeTarget "houchi" */;
 			buildPhases = (
+				A88D6B46DD1268A714CF49FD /* [CP] Check Pods Manifest.lock */,
 				355BF65F25555FDB00996A86 /* Sources */,
 				355BF66025555FDB00996A86 /* Frameworks */,
 				355BF66125555FDB00996A86 /* Resources */,
+				E3C926EEB341A0D615D1636F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +183,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A88D6B46DD1268A714CF49FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-houchi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3C926EEB341A0D615D1636F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-houchi/Pods-houchi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-houchi/Pods-houchi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-houchi/Pods-houchi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		355BF65F25555FDB00996A86 /* Sources */ = {
@@ -302,6 +371,7 @@
 		};
 		355BF67825555FDE00996A86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF81F49EB4A862777C46268E /* Pods-houchi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +389,7 @@
 		};
 		355BF67925555FDE00996A86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92058D8DAAD8BFA6BB05A063 /* Pods-houchi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
