@@ -22,8 +22,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // UserDefaultsに所持金を保存するために初期化
-        UserDefaults.standard.set(0, forKey: "shozikinn")
+        let shozikinn = UserDefaults.standard.object(forKey: "shozikinn")
+        if shozikinn != nil {
+        } else {
+            // UserDefaultsに所持金を保存するために初期化
+                  UserDefaults.standard.set(0, forKey: "shozikinn")
+        
+    }
+      
         timer = Timer.scheduledTimer(
             timeInterval: 1,
             target: self,
@@ -32,6 +38,15 @@ class ViewController: UIViewController {
             repeats: true     )
         a.text = "毎秒  \(String(maibilyou))"
         g.text = "\(String(maibilyou * 25))円"
+        let l = UserDefaults.standard.object(forKey: "level")
+        if l != nil {
+            level = l as! Int
+        } else {
+        }
+        f.text = String(level)
+        maibilyou = 3 * level
+        a.text = "毎秒　\(String(maibilyou))"
+        g.text = "\(String(level * 25))円"
         
     }
     

@@ -55,7 +55,7 @@ class fukubukuroViewController: UIViewController {
                 completeText:"戻る",
                 style: .info,
                 colorStyle: 0xb0c4de,
-                colorTextButton: 0xb0c4de
+                colorTextButton: 0x696969
             )
             
             
