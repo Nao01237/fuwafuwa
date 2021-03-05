@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet var e: UILabel!
     @IBOutlet var f: UILabel!
     @IBOutlet var g: UILabel!
+	@IBOutlet var fukubukuroButton: UIButton!
+	@IBOutlet var shopButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +50,21 @@ class ViewController: UIViewController {
         cost = maibilyou * 25
         g.text = "\(String(cost))円"
         
-        
+		
+		// ここから追加！
+		let fukubukuroClose: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(closeMenu(_:)))
+		fukubukuroClose.direction = .left
+		let shopClose: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(closeMenu(_:)))
+		shopClose.direction = .left
+		fukubukuroButton.addGestureRecognizer(fukubukuroClose)
+		shopButton.addGestureRecognizer(shopClose)
+		
+		let fukubukuroOpen: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(openMenu(_:)))
+		fukubukuroOpen.direction = .right
+		let shopOpen: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(openMenu(_:)))
+		shopOpen.direction = .right
+		fukubukuroButton.addGestureRecognizer(fukubukuroOpen)
+		shopButton.addGestureRecognizer(shopOpen)
     }
     
     @objc func count() {
@@ -78,8 +94,24 @@ class ViewController: UIViewController {
             g.text = "\(String(cost))円"
             a.text = "毎秒 　\(String(maibilyou))"
         }
-    
     }
+	
+	// ここから追加！
+	@objc func closeMenu(_ sender: UISwipeGestureRecognizer) {
+		UIView.animate(withDuration: 0.5, animations: {
+			self.fukubukuroButton.center.x = -40
+			self.shopButton.center.x = -40
+		}, completion: {_ in
+		})
+	}
+	
+	@objc func openMenu(_ sender: UISwipeGestureRecognizer) {
+		UIView.animate(withDuration: 0.5, animations: {
+			self.fukubukuroButton.center.x = 50
+			self.shopButton.center.x = 50
+		}, completion: {_ in
+		})
+	}
 }
 
 
