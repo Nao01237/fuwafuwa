@@ -19,7 +19,7 @@ class G1ViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        number = Int.random(in: 0...2)
+        number = Int.random(in: 0...3)
         
             if number == 0 {
                 g1.image = UIImage(named: "kutu1")
@@ -28,6 +28,9 @@ class G1ViewController: UIViewController {
             } else if number == 1 {
                 g1.image = UIImage(named: "kazari1")
                L1.text = "新緑のツタの冠"
+            } else if number == 2 {
+                               g1.image = UIImage(named: "kazari3")
+                              L1.text = "真っ赤なリボン"
             } else {
                 g1.image = UIImage(named: "kazari2")
                L1.text = "魔法の絆創膏"

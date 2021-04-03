@@ -47,26 +47,26 @@ class G11ViewController: UIViewController {
     @IBOutlet var L21: UILabel!
     
 
-    var imeagname:[String] = ["kutu1","kazari1","kazari2"]
+    var imeagname:[String] = ["kutu1","kazari1","kazari2","kazari3"]
     
-    var aitemuname:[String] = ["妖精の靴","新緑のツタの冠","魔法の絆創膏"]
+    var aitemuname:[String] = ["妖精の靴","新緑のツタの冠","魔法の絆創膏","真っ赤なリボン"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        number11 = Int.random(in: 0...2)
-        number12 = Int.random(in: 0...2)
-        number13 = Int.random(in: 0...2)
-        number14 = Int.random(in: 0...2)
-        number15 = Int.random(in: 0...2)
-        number16 = Int.random(in: 0...2)
-        number17 = Int.random(in: 0...2)
-        number18 = Int.random(in: 0...2)
-        number19 = Int.random(in: 0...2)
-        number20 = Int.random(in: 0...2)
-        number21 = Int.random(in: 0...2)
+        number11 = Int.random(in: 0...3)
+        number12 = Int.random(in: 0...3)
+        number13 = Int.random(in: 0...3)
+        number14 = Int.random(in: 0...3)
+        number15 = Int.random(in: 0...3)
+        number16 = Int.random(in: 0...3)
+        number17 = Int.random(in: 0...3)
+        number18 = Int.random(in: 0...3)
+        number19 = Int.random(in: 0...3)
+        number20 = Int.random(in: 0...3)
+        number21 = Int.random(in: 0...3)
         
         g11.image = UIImage(named: imeagname[number11])//イメージネームって言うって言う配列の中身をランダムに取り出す
         g12.image = UIImage(named: imeagname[number12])

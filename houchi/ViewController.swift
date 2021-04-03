@@ -22,12 +22,14 @@ class ViewController: UIViewController {
     @IBOutlet var g: UILabel!
 	@IBOutlet var fukubukuroButton: UIButton!
 	@IBOutlet var shopButton: UIButton!
-
+    @IBOutlet var kaihouButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let appDomain = Bundle.main.bundleIdentifier
-        UserDefaults.standard.removePersistentDomain(forName: appDomain!)
+       // let appDomain = Bundle.main.bundleIdentifier
+       // UserDefaults.standard.removePersistentDomain(forName: appDomain!)
         let shozikinn = UserDefaults.standard.object(forKey: "shozikinn")
         if shozikinn == nil {
             // UserDefaultsに所持金を保存するために初期化
@@ -40,8 +42,8 @@ class ViewController: UIViewController {
             selector: #selector(self.count),
             userInfo: nil,
             repeats: true     )
-        let l = UserDefaults.standard.object(forKey: "level")
-        if l == nil {
+        level = UserDefaults.standard.object(forKey: "level") as! Int
+        if level == 0 {
             UserDefaults.standard.set(1, forKey: "level")
         }
         f.text = String(level)
@@ -101,6 +103,7 @@ class ViewController: UIViewController {
 		UIView.animate(withDuration: 0.5, animations: {
 			self.fukubukuroButton.center.x = -40
 			self.shopButton.center.x = -40
+            self.kaihouButton.center.x = -40
 		}, completion: {_ in
 		})
 	}
@@ -109,9 +112,11 @@ class ViewController: UIViewController {
 		UIView.animate(withDuration: 0.5, animations: {
 			self.fukubukuroButton.center.x = 50
 			self.shopButton.center.x = 50
+            self.kaihouButton.center.x = 50
 		}, completion: {_ in
 		})
 	}
+   
 }
 
 
