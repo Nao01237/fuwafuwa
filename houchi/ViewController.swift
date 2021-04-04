@@ -28,8 +28,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       // let appDomain = Bundle.main.bundleIdentifier
-       // UserDefaults.standard.removePersistentDomain(forName: appDomain!)
+//       let appDomain = Bundle.main.bundleIdentifier
+//        UserDefaults.standard.removePersistentDomain(forName: appDomain!)
         let shozikinn = UserDefaults.standard.object(forKey: "shozikinn")
         if shozikinn == nil {
             // UserDefaultsに所持金を保存するために初期化
@@ -42,9 +42,10 @@ class ViewController: UIViewController {
             selector: #selector(self.count),
             userInfo: nil,
             repeats: true     )
-        level = UserDefaults.standard.object(forKey: "level") as! Int
-        if level == 0 {
-            UserDefaults.standard.set(1, forKey: "level")
+        
+       level = UserDefaults.standard.integer(forKey: "level")
+       if level == 0 {
+           UserDefaults.standard.set(1, forKey: "level")
         }
         f.text = String(level)
         maibilyou = 3 * level
