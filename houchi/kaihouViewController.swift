@@ -88,12 +88,81 @@ class kaihouViewController: UIViewController {
                 colorTextButton: 0x696969
                )
         }
+            
+            
 
         }
+    
+      
+         @IBAction func selectShop2() {
+              
+              if level > 30 {
+                  UserDefaults.standard.removeObject(forKey: "shopNumber")
+                  
+                  shopNumber = 3
+                  UserDefaults.standard.set(shopNumber, forKey: "shopNumber")
+                  
+                  SCLAlertView().showTitle(
+                                "アンティークショップが解放されたよ！",
+                                subTitle: "新しいお店も繁盛させよう！", timeout: .none,
+                                completeText:"戻る",
+                                style: .info,
+                                colorStyle: 0xb0c4de,
+                                colorTextButton: 0x696969
+                            )
+                
+              }else{
+                  SCLAlertView().showTitle(
+                  "レベルが足りないよ",
+                  subTitle: "もっとレベルをあげよう！", timeout: .none,
+                  completeText:"戻る",
+                  style: .info,
+                  colorStyle: 0xb0c4de,
+                  colorTextButton: 0x696969
+                 )
+          }
+              
+        
+              
+    }
+    
+      
+           @IBAction func selectShop03() {
+              
+              if level > 45 {
+                  UserDefaults.standard.removeObject(forKey: "shopNumber")
+                  
+                  shopNumber = 3
+                  UserDefaults.standard.set(shopNumber, forKey: "shopNumber")
+                  
+                  SCLAlertView().showTitle(
+                                "謎のお店が解放されたよ！",
+                                subTitle: "新しいお店も繁盛させよう！", timeout: .none,
+                                completeText:"戻る",
+                                style: .info,
+                                colorStyle: 0xb0c4de,
+                                colorTextButton: 0x696969
+                            )
+              }else{
+                  SCLAlertView().showTitle(
+                  "レベルが足りないよ",
+                  subTitle: "もっとレベルをあげよう！", timeout: .none,
+                  completeText:"戻る",
+                  style: .info,
+                  colorStyle: 0xb0c4de,
+                  colorTextButton: 0x696969
+                 )
+          }
+              
+              
+
+          }
         
     
 
    @IBAction func back() {
    self.dismiss(animated: true, completion: nil)
 }
+
 }
+
