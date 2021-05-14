@@ -93,7 +93,7 @@ class ViewController: UIViewController {
             
             try! realm.write() {
                 user.shozikin -= user.cost
-                user.level += level
+                user.level = level
                 user.maibyou = maibyou
                 user.cost = cost
             }
