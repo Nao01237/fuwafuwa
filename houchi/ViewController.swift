@@ -11,10 +11,8 @@ import RealmSwift
 
 class ViewController: UIViewController {
     let realm = try! Realm()
-    var level: Int = 1
-    var maibilyou: Int = 3
+    var user: User?
     var timer: Timer?
-    var cost: Int = 0
     @IBOutlet var a: UILabel!
     @IBOutlet var b: UILabel!
     @IBOutlet var c: UILabel!
@@ -29,7 +27,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        user = realm.objects(User.self).first
 
 
         timer = Timer.scheduledTimer(
@@ -39,12 +37,16 @@ class ViewController: UIViewController {
             userInfo: nil,
             repeats: true     )
         
+        guard let user = user else {
+            fatalError("error")
+        }
+        f.text = String(user.level)
+        a.text = "毎秒　\(String(user.maibyou))"
+        g.text = "\(String(user.cost))円"
+        
+        
        
-        f.text = String(level)
-        maibilyou = 3 * level
-        a.text = "毎秒　\(String(maibilyou))"
-        cost = maibilyou * 25
-        g.text = "\(String(cost))円"
+       
         
 		
 		// ここから追加！
@@ -64,31 +66,42 @@ class ViewController: UIViewController {
     }
     
     @objc func count() {
-        // UserDefaultsから所持金を取り出す
-        var shozikinn = UserDefaults.standard.object(forKey: "shozikinn") as! Int
-        if shozikinn >= 10000000 {
+        guard let user = user else {
+        fatalError("user not found")
+        }
+        
+        
+        if user.shozikin >= 10000000 {
             timer?.invalidate()
         } else {
-            // 所持金をプラスして保存
-            shozikinn = shozikinn + maibilyou
-            UserDefaults.standard.set(shozikinn, forKey: "shozikinn")
-            d.text = "\(String(shozikinn))円"
+            try!realm.write() {
+                user.shozikin += user.maibyou
+            }
+            user.shozikin = user.shozikin + user.maibyou
+            d.text = "\(String(user.shozikin))円"
         }
     }
     
     @IBAction func levelUp() {
-        var shozikinn = UserDefaults.standard.object(forKey: "shozikinn") as! Int
-        if shozikinn >= cost {
-            // 所持金を引いて保存
-            shozikinn = shozikinn - cost
-            UserDefaults.standard.set(shozikinn, forKey: "shozikinn")
-            level = level + 1
-            maibilyou = 3 * level
-            cost = maibilyou * 25
-            UserDefaults.standard.set(level, forKey: "level")
-            f.text = String(level)
-            g.text = "\(String(cost))円"
-            a.text = "毎秒 　\(String(maibilyou))"
+        guard let user = user else {
+            fatalError("user not found")
+        }
+        if user.shozikin >= user.cost {
+            let level = user.level + 1
+            let maibyou = level * 3
+            let cost = maibyou * 25
+            
+            try! realm.write() {
+                user.shozikin -= user.cost
+                user.level += level
+                user.maibyou = maibyou
+                user.cost = cost
+            }
+            
+            
+            f.text = String(user.level)
+            g.text = "\(String(user.cost))円"
+            a.text = "毎秒 　\(String(user.maibyou))"
         }
     }
 	

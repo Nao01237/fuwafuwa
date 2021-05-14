@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if realm.objects(User.self).isEmpty {
             let user = User()
             user.level = 1
+            user.maibyou = 3
+            user.cost = 75
             try! realm.write() {
                 realm.add(user)
             }
