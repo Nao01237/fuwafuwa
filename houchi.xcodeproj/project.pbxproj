@@ -21,6 +21,8 @@
 		3598FEF1263C1A86007926E7 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3598FEF0263C1A86007926E7 /* Realm */; };
 		3598FEF3263C1A86007926E7 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3598FEF2263C1A86007926E7 /* RealmSwift */; };
 		3598FEF526454767007926E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598FEF426454767007926E7 /* User.swift */; };
+		3598FEFB2660FD8A007926E7 /* shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598FEFA2660FD8A007926E7 /* shop.swift */; };
+		3598FEFD266101ED007926E7 /* ShopData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3598FEFC266101ED007926E7 /* ShopData.swift */; };
 		35D522E225B1A4180057BB9B /* fukubukuroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D522E125B1A4180057BB9B /* fukubukuroViewController.swift */; };
 		E9749627A147B663F4D3C3E2 /* Pods_houchi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D0835D911FD7EAC0D0271A /* Pods_houchi.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		358C114F25E90A180047D89C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3598FEC6261804EC007926E7 /* kaihouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kaihouViewController.swift; sourceTree = "<group>"; };
 		3598FEF426454767007926E7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3598FEFA2660FD8A007926E7 /* shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shop.swift; sourceTree = "<group>"; };
+		3598FEFC266101ED007926E7 /* ShopData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopData.swift; sourceTree = "<group>"; };
 		35D522E125B1A4180057BB9B /* fukubukuroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fukubukuroViewController.swift; sourceTree = "<group>"; };
 		92058D8DAAD8BFA6BB05A063 /* Pods-houchi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-houchi.release.xcconfig"; path = "Target Support Files/Pods-houchi/Pods-houchi.release.xcconfig"; sourceTree = "<group>"; };
 		DF81F49EB4A862777C46268E /* Pods-houchi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-houchi.debug.xcconfig"; path = "Target Support Files/Pods-houchi/Pods-houchi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				35D522E125B1A4180057BB9B /* fukubukuroViewController.swift */,
 				3598FEC6261804EC007926E7 /* kaihouViewController.swift */,
 				3598FEF426454767007926E7 /* User.swift */,
+				3598FEFA2660FD8A007926E7 /* shop.swift */,
+				3598FEFC266101ED007926E7 /* ShopData.swift */,
 			);
 			path = houchi;
 			sourceTree = "<group>";
@@ -249,11 +255,13 @@
 			files = (
 				355BF6A825982D4C00996A86 /* ViewCell.swift in Sources */,
 				3598FEC7261804EC007926E7 /* kaihouViewController.swift in Sources */,
+				3598FEFB2660FD8A007926E7 /* shop.swift in Sources */,
 				355BF6AA2598501A00996A86 /* G1ViewController.swift in Sources */,
 				35D522E225B1A4180057BB9B /* fukubukuroViewController.swift in Sources */,
 				355BF66B25555FDB00996A86 /* ViewController.swift in Sources */,
 				3598FEF526454767007926E7 /* User.swift in Sources */,
 				355BF66725555FDB00996A86 /* AppDelegate.swift in Sources */,
+				3598FEFD266101ED007926E7 /* ShopData.swift in Sources */,
 				355BF6AC25996F1000996A86 /* G11ViewController.swift in Sources */,
 				355BF66925555FDB00996A86 /* SceneDelegate.swift in Sources */,
 			);

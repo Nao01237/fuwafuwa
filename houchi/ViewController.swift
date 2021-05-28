@@ -76,8 +76,9 @@ class ViewController: UIViewController {
         } else {
             try!realm.write() {
                 user.shozikin += user.maibyou
+                 user.shozikin = user.shozikin + user.maibyou
             }
-            user.shozikin = user.shozikin + user.maibyou
+           
             d.text = "\(String(user.shozikin))円"
         }
     }
