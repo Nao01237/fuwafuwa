@@ -35,9 +35,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
         }
+        for shop in shops {
+            try! realm.write() {
+                realm.add(shop)
+            }
+        }
         return true
     }
-
+           
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

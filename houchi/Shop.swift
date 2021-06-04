@@ -12,23 +12,23 @@ import UIKit
 
 class Shop: Object {
     
-    @objc dynamic var id: Int
+    @objc dynamic var id: Int = 1
     
-    @objc dynamic var isUnlocked: Bool
+    @objc dynamic var isUnlocked: Bool = false
     
-    @objc dynamic var name: String
+    @objc dynamic var name: String = ""
     
-    @objc dynamic var unlockLevel: Int
+    @objc dynamic var unlockLevel: Int = 0
     
-    @objc dynamic var maibyou: Int
+    @objc dynamic var maibyou: Int = 0
     
-    @objc dynamic var cost: Int
+    @objc dynamic var cost: Int = 0
     
-    @objc dynamic var level: Int = 1
+    @objc dynamic var level: Int = 0
     
-    @objc dynamic var unlockedImeage: UIImage
+    @objc dynamic var unlockedImeage: UIImage = UIImage()
     
-    @objc dynamic var lockedImage: UIImage
+    @objc dynamic var lockedImage: UIImage = UIImage()
     
     internal init(Id: Int, isUnlocked: Bool, name: String, unlockedLevel: Int,
                   maibyou: Int, cost: Int, level: Int = 1, unlockedImeage: UIImage, lockedImage: UIImage ){
