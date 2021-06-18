@@ -526,6 +526,14 @@
                                     <action selector="levelUp" destination="BYZ-38-t0r" eventType="touchUpInside" id="LLu-H0-QAM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGh-Je-cT3">
+                                <rect key="frame" x="92" y="111" width="150" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SetoFontSP_sjis" family="SetoFontSP_sjis" pointSize="22"/>
+                                <state key="normal" title="←移動" backgroundImage="idou2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lv." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mI-yX-7nw">
                                 <rect key="frame" x="41" y="76" width="51" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -627,6 +635,14 @@
                                 <rect key="frame" x="100" y="193" width="383" height="343"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LR-it-Z04">
+                                <rect key="frame" x="258" y="80" width="216" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SetoFontSP_sjis" family="SetoFontSP_sjis" pointSize="22"/>
+                                <state key="normal" title="移動→" backgroundImage="idou2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -643,6 +659,7 @@
                         <outlet property="g" destination="CXh-fY-hpa" id="GHZ-bx-xUq"/>
                         <outlet property="kaihouButton" destination="05H-ke-jlV" id="kH7-iU-ynS"/>
                         <outlet property="shopButton" destination="ZNZ-mv-6fO" id="hnZ-jk-bbL"/>
+                        <outlet property="shopImage" destination="U1g-mR-Bm8" id="kUH-dZ-sr1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -651,7 +668,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Mry-xs-nei"/>
+        <segue reference="ZnW-yK-O8L"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="768" height="768"/>
@@ -665,5 +682,6 @@
         <image name="ggb" width="768" height="768"/>
         <image name="ggc-1" width="768" height="768"/>
         <image name="hukuro" width="768" height="768"/>
+        <image name="idou2" width="370" height="320"/>
     </resources>
 </document>

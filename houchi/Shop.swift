@@ -26,23 +26,11 @@ class Shop: Object {
     
     @objc dynamic var level: Int = 0
     
-    @objc dynamic var unlockedImeage: UIImage = UIImage()
+    @objc dynamic var unlockedImage: String = ""
     
-    @objc dynamic var lockedImage: UIImage = UIImage()
+    @objc dynamic var lockedImage: String = ""
     
-    internal init(Id: Int, isUnlocked: Bool, name: String, unlockedLevel: Int,
-                  maibyou: Int, cost: Int, level: Int = 1, unlockedImeage: UIImage, lockedImage: UIImage ){
-    
-    self.id = id
-    self.isUnlocked = isUnlocked
-    self.name = name
-    self.unlockLevel = unlockLevel
-    self.maibyou = maibyou
-    self.cost = cost
-    self.level = level
-    self.unlockedImage = unlockedImage
-    self.lockedImage = lockedImage
+   
     
     
-}
 }

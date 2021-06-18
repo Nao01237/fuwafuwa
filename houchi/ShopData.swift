@@ -9,17 +9,17 @@
 import Foundation
 import UIKit
 
-let shops = [
-    Shop(Id: 1, isUnlocked: true, name: "最初のお店", unlockedLevel: 1, maibyou: 3, cost: 25, level: 1, unlockedImeage: UIImage(named: "a")!, lockedImage: UIImage(named: "a")!
-    ),
+struct ShopData: Codable {
     
-    Shop(Id: 2, isUnlocked: true, name: "パン屋さん", unlockedLevel: 15, maibyou: 10, cost: 100, level: 1, unlockedImeage: UIImage(named: "a")!, lockedImage: UIImage(named: "a")!
-        ),
-        
-    Shop(Id: 3, isUnlocked: true, name: "アンティークショップ", unlockedLevel: 30, maibyou: 100, cost: 1000, level: 1, unlockedImeage: UIImage(named: "a")!, lockedImage: UIImage(named: "a")!
-        ),
-        
-    Shop(Id: 4, isUnlocked: true, name: "謎のお店", unlockedLevel: 45, maibyou: 500, cost: 5000, level: 1, unlockedImeage: UIImage(named: "a")!, lockedImage: UIImage(named: "a")!
-        ),
- ]
+    var id: Int
+    var isUnlocked: Bool
+    var unlockLevel: Int
+    var name: String
+    var maibyou: Int
+    var cost: Int
+    var level: Int
+    var unlockedImage: String
+    var lockedImage: String
+    
 
+}

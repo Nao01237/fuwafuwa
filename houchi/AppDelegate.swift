@@ -26,20 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let realm = try! Realm()
         if realm.objects(User.self).isEmpty {
-            let user = User()
-            user.level = 1
-            user.maibyou = 3
-            user.cost = 75
-            try! realm.write() {
-                realm.add(user)
-            }
+           
+            
+            Game.setup()
             
         }
-        for shop in shops {
-            try! realm.write() {
-                realm.add(shop)
-            }
-        }
+        
         return true
     }
            

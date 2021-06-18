@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35592F3526736DB400B64949 /* shopData.json in Resources */ = {isa = PBXBuildFile; fileRef = 35592F3426736DB400B64949 /* shopData.json */; };
+		35592F3726736DD600B64949 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35592F3626736DD600B64949 /* Game.swift */; };
 		355BF66725555FDB00996A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BF66625555FDB00996A86 /* AppDelegate.swift */; };
 		355BF66925555FDB00996A86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BF66825555FDB00996A86 /* SceneDelegate.swift */; };
 		355BF66B25555FDB00996A86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355BF66A25555FDB00996A86 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35592F3426736DB400B64949 /* shopData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shopData.json; sourceTree = "<group>"; };
+		35592F3626736DD600B64949 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		355BF66325555FDB00996A86 /* houchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = houchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		355BF66625555FDB00996A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		355BF66825555FDB00996A86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 		355BF66525555FDB00996A86 /* houchi */ = {
 			isa = PBXGroup;
 			children = (
+				35592F3426736DB400B64949 /* shopData.json */,
 				358C114F25E90A180047D89C /* Assets.xcassets */,
 				355BF67A2567CC6800996A86 /* font */,
 				355BF66625555FDB00996A86 /* AppDelegate.swift */,
@@ -101,6 +106,7 @@
 				3598FEF426454767007926E7 /* User.swift */,
 				3598FEFA2660FD8A007926E7 /* shop.swift */,
 				3598FEFC266101ED007926E7 /* ShopData.swift */,
+				35592F3626736DD600B64949 /* Game.swift */,
 			);
 			path = houchi;
 			sourceTree = "<group>";
@@ -197,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35592F3526736DB400B64949 /* shopData.json in Resources */,
 				355BF67C2567D19D00996A86 /* sjis_sp_setofont.ttf in Resources */,
 				355BF67325555FDE00996A86 /* LaunchScreen.storyboard in Resources */,
 				358C115025E90A190047D89C /* Assets.xcassets in Resources */,
@@ -260,6 +267,7 @@
 				35D522E225B1A4180057BB9B /* fukubukuroViewController.swift in Sources */,
 				355BF66B25555FDB00996A86 /* ViewController.swift in Sources */,
 				3598FEF526454767007926E7 /* User.swift in Sources */,
+				35592F3726736DD600B64949 /* Game.swift in Sources */,
 				355BF66725555FDB00996A86 /* AppDelegate.swift in Sources */,
 				3598FEFD266101ED007926E7 /* ShopData.swift in Sources */,
 				355BF6AC25996F1000996A86 /* G11ViewController.swift in Sources */,

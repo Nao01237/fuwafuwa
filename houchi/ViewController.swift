@@ -11,6 +11,7 @@ import RealmSwift
 
 class ViewController: UIViewController {
     let realm = try! Realm()
+    var shops: [Shop]?
     var user: User?
     var timer: Timer?
     @IBOutlet var a: UILabel!
@@ -23,11 +24,24 @@ class ViewController: UIViewController {
 	@IBOutlet var fukubukuroButton: UIButton!
 	@IBOutlet var shopButton: UIButton!
     @IBOutlet var kaihouButton: UIButton!
+    @IBOutlet var shopImage: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         user = realm.objects(User.self).first
+        
+        shops = Array(realm.objects(Shop .self).sorted(byKeyPath: "id", ascending: true))
+        
+        shopImage.image = UIImage(named: shops![0].unlockedImage)
+        
+        b.text =  shops![0].name
+        
+        f.text = String(shops![0].level)
+        
+        g.text = String(shops![0].cost)
+        
+        a.text =  String(shops![0].maibyou)
 
 
         timer = Timer.scheduledTimer(
