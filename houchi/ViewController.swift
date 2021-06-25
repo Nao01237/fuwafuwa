@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var shops: [Shop]?
     var user: User?
     var timer: Timer?
+    var index: Int = 0
     @IBOutlet var a: UILabel!
     @IBOutlet var b: UILabel!
     @IBOutlet var c: UILabel!
@@ -33,15 +34,15 @@ class ViewController: UIViewController {
         
         shops = Array(realm.objects(Shop .self).sorted(byKeyPath: "id", ascending: true))
         
-        shopImage.image = UIImage(named: shops![0].unlockedImage)
+        shopImage.image = UIImage(named: shops![index].unlockedImage)
         
-        b.text =  shops![0].name
+        b.text =  shops![index].name
         
-        f.text = String(shops![0].level)
+        f.text = String(shops![index].level)
         
-        g.text = String(shops![0].cost)
+        g.text = String(shops![index].cost)
         
-        a.text =  String(shops![0].maibyou)
+        a.text =  String(shops![index].maibyou)
 
 
         timer = Timer.scheduledTimer(
@@ -138,7 +139,37 @@ class ViewController: UIViewController {
 		}, completion: {_ in
 		})
 	}
+    
+    @IBAction func next() {
+        index += 1
+        if index > shops!.count - 1 {
+            index = 0
+        }
+        
+        b.text = shops![index].name
+        
+        if shops![index].isUnlocked {
+            shopImage.image = UIImage(named: shops![index].unlockedImage)
+        } else {
+            shopImage.image = UIImage(named: shops![index].lockedImage)
+        }
    
+}
+    @IBAction func prev() {
+        index -= 1
+        if index < 0 {
+            index = 0
+        }
+        
+        b.text = shops![index].name
+        
+        if shops![index].isUnlocked {
+            shopImage.image = UIImage(named: shops![index].unlockedImage)
+        } else {
+            shopImage.image = UIImage(named: shops![index].lockedImage)
+        }
+
+}
 }
 
 

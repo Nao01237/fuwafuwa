@@ -3,7 +3,7 @@
     "id": 1,
     "isUnlocked": true,
     "name": "最初のお店",
-    "unlockedLevel": 1,
+    "unlockLevel": 1,
     "maibyou": 3,
     "cost": 25,
     "level": 1,
@@ -12,35 +12,35 @@
   },
   {
     "id": 2,
-    "isUnlocked": true,
+    "isUnlocked": false,
     "name": "パン屋さん",
-    "unlockedLevel": 15,
+    "unlockLevel": 15,
     "maibyou": 10,
     "cost": 100,
     "level": 1,
-    "unlockedImage": "a",
+    "unlockedImage": "b",
     "lockedImage": "bb"
   },
   {
     "id": 3,
-    "isUnlocked": true,
+    "isUnlocked": false,
     "name": "アンティークショップ",
-    "unlockedLevel": 30,
+    "unlockLevel": 30,
     "maibyou": 100,
     "cost": 1000,
     "level": 1,
-    "unlockedImage": "a",
-    "lockedImage": "a"
+    "unlockedImage": "c",
+    "lockedImage": "cc"
   },
   {
     "id": 4,
-    "isUnlocked": true,
+    "isUnlocked": false,
     "name": "謎のお店",
-    "unlockedLevel": 45,
+    "unlockLevel": 45,
     "maibyou": 500,
     "cost": 5000,
     "level": 1,
-    "unlockedImage": "a",
-    "lockedImage": "a"
+    "unlockedImage": "d",
+    "lockedImage": "dd"
   }
 ]
