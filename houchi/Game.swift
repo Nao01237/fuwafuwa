@@ -41,7 +41,7 @@ class Game {
                 let shop = Shop()
                 shop.id = data.id
                 shop.isUnlocked = data.isUnlocked
-                shop.name = data.lockedImage
+                shop.name = data.name
                 shop.unlockLevel = data.unlockLevel
                 shop.maibyou = data.maibyou
                 shop.cost = data.cost
