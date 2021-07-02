@@ -11,9 +11,7 @@ import RealmSwift
 
 class User: Object {
     @objc dynamic var shozikin: Int = 0
-    @objc dynamic var level: Int = 0
-    @objc dynamic var maibyou: Int = 0
-    @objc dynamic var cost: Int = 0
+    @objc dynamic var totalMaibyou: Int = 0
     
     
 }

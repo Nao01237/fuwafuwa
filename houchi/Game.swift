@@ -10,7 +10,15 @@ import Foundation
 import RealmSwift
 
 class Game {
-    static func setup() {
+    var user: User = User()
+    var shops: [Shop] = []
+    let realm = try! Realm()
+    static let shared = Game()
+    
+    func setup() {
+        user = realm.objects(User.self).first!
+        shops = Array(realm.objects(Shop.self).sorted(byKeyPath: "id", ascending: true))
+        
         
         let realm = try! Realm()
         
@@ -29,9 +37,9 @@ class Game {
         }
         
         let user = User()
-                 user.level = 1
-                 user.maibyou = 3
-                 user.cost = 75
+                 
+                 shops[index].totalMabyou = 3
+                 
                  try! realm.write() {
                      realm.add(user)
                  }

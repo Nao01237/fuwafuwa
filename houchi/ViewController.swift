@@ -55,9 +55,9 @@ class ViewController: UIViewController {
         guard let user = user else {
             fatalError("error")
         }
-        f.text = String(user.level)
-        a.text = "毎秒　\(String(user.maibyou))"
-        g.text = "\(String(user.cost))円"
+        f.text = String(shops![index].level)
+        a.text = "毎秒　\(String(shops![index].maibyou))"
+        g.text = "\(String(shops![index].cost))円"
         
         
        
@@ -90,8 +90,7 @@ class ViewController: UIViewController {
             timer?.invalidate()
         } else {
             try!realm.write() {
-                user.shozikin += user.maibyou
-                 user.shozikin = user.shozikin + user.maibyou
+                 user.shozikin = user.shozikin + user.totalMaibyou
             }
            
             d.text = "\(String(user.shozikin))円"
@@ -99,25 +98,25 @@ class ViewController: UIViewController {
     }
     
     @IBAction func levelUp() {
-        guard let user = user else {
+        guard let user = user, let shops = shops else {
             fatalError("user not found")
         }
-        if user.shozikin >= user.cost {
-            let level = user.level + 1
+        if user.shozikin >= shops[index].cost {
+            let level = shops[index].level + 1
             let maibyou = level * 3
             let cost = maibyou * 25
             
             try! realm.write() {
-                user.shozikin -= user.cost
-                user.level = level
-                user.maibyou = maibyou
-                user.cost = cost
+                user.shozikin -= shops[index].cost
+                shops[index].level = level
+                user.totalMaibyou = maibyou
+                shops[index].cost = cost
             }
             
             
-            f.text = String(user.level)
-            g.text = "\(String(user.cost))円"
-            a.text = "毎秒 　\(String(user.maibyou))"
+            f.text = String(shops[index].level)
+            g.text = "\(String(shops[index].cost))円"
+            a.text = "毎秒 　\(String(shops[index].maibyou))"
         }
     }
 	
@@ -147,6 +146,9 @@ class ViewController: UIViewController {
         }
         
         b.text = shops![index].name
+        f.text = String(shops![index].level)
+        a.text = "毎秒　\(String(shops![index].maibyou))"
+        g.text = "\(String(shops![index].cost))円"
         
         if shops![index].isUnlocked {
             shopImage.image = UIImage(named: shops![index].unlockedImage)
@@ -162,6 +164,9 @@ class ViewController: UIViewController {
         }
         
         b.text = shops![index].name
+        f.text = String(shops![index].level)
+        a.text = "毎秒　\(String(shops![index].maibyou))"
+        g.text = "\(String(shops![index].cost))円"
         
         if shops![index].isUnlocked {
             shopImage.image = UIImage(named: shops![index].unlockedImage)
