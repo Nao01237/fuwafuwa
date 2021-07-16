@@ -48,9 +48,7 @@ class ViewController: UIViewController {
             userInfo: nil,
             repeats: true     )
         
-        guard let user = user else {
-            fatalError("error")
-        }
+      
         f.text = String(shops![index].level)
         a.text = "毎秒　\(String(shops![index].maibyou))"
         g.text = "\(String(shops![index].cost))円"
@@ -77,9 +75,7 @@ class ViewController: UIViewController {
     }
     
     @objc func count() {
-        guard let user = user else {
-        fatalError("user not found")
-        }
+       
         
         
         if user.shozikin >= 10000000 {
@@ -94,9 +90,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func levelUp() {
-        guard let user = user, let shops = shops else {
-            fatalError("user not found")
-        }
+        
         if user.shozikin >= shops[index].cost {
             let level = shops[index].level + 1
             let maibyou = shops[index].maibyou

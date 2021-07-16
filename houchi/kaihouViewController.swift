@@ -11,8 +11,7 @@ import RealmSwift
 import SCLAlertView
 
 class kaihouViewController: UIViewController {
-    let realm = try! Realm()
-    var user: User?
+    let game = Game.shared
     
     @IBOutlet var shop1: UIImageView!
     @IBOutlet var shop2: UIImageView!
@@ -29,12 +28,9 @@ class kaihouViewController: UIViewController {
         
         var shopNumber: Int!
         
-       user = realm.objects(User.self).first
-       guard let user = user else {
-           fatalError("error")
-       }
+    
 
-        if user.level > 45 {
+        if game.shops[2].level >= 45 {
             shop1.image = UIImage(named: "b")
             shop2.image = UIImage(named: "c")
             shop3.image = UIImage(named: "d")
@@ -43,14 +39,14 @@ class kaihouViewController: UIViewController {
             k3.setTitle("解放済み", for: .normal)
             
             
-        } else if user.level > 30 {
+        } else if game.shops[1].level >= 30 {
             shop1.image = UIImage(named: "b")
             shop2.image = UIImage(named: "c")
             shop3.image = UIImage(named: "dd")
             k1.setTitle("解放済み", for: .normal)
             k2.setTitle("解放済み", for: .normal)
             
-        } else if user.level > 15 {
+        } else if game.shops[0].level >= 15 {
             shop1.image = UIImage(named: "b")
             shop2.image = UIImage(named: "cc")
             shop3.image = UIImage(named: "dd")
@@ -67,14 +63,10 @@ class kaihouViewController: UIViewController {
     }
     
          @IBAction func selectShop01() {
-            guard let user = user else {
-                   fatalError("error")
-               }
-            if user.level > 15 {
-                UserDefaults.standard.removeObject(forKey: "shopNumber")
+           
+                 
+            if game.shops[0].level >= 15 {
                 
-                shopNumber = 3
-                UserDefaults.standard.set(shopNumber, forKey: "shopNumber")
                 
                 SCLAlertView().showTitle(
                               "パン屋さんが解放されたよ！",
@@ -101,10 +93,8 @@ class kaihouViewController: UIViewController {
     
       
          @IBAction func selectShop2() {
-              guard let user = user else {
-                     fatalError("error")
-                 }
-            if user.level > 30 {
+            
+            if game.shops[1].level >= 30 {
                   UserDefaults.standard.removeObject(forKey: "shopNumber")
                   
                   shopNumber = 3
@@ -136,10 +126,8 @@ class kaihouViewController: UIViewController {
     
       
            @IBAction func selectShop03() {
-              guard let user = user else {
-                     fatalError("error")
-                 }
-            if user.level > 45 {
+             
+            if game.shops[2].level >= 45 {
                   UserDefaults.standard.removeObject(forKey: "shopNumber")
                   
                   shopNumber = 3
