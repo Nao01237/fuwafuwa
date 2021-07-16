@@ -11,8 +11,7 @@ import RealmSwift
 
 class ViewController: UIViewController {
     let realm = try! Realm()
-    var shops: [Shop]?
-    var user: User?
+    let game = Game.shared
     var timer: Timer?
     var index: Int = 0
     @IBOutlet var a: UILabel!
@@ -30,19 +29,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        user = realm.objects(User.self).first
+
+        shopImage.image = UIImage(named: game.shops[index].unlockedImage)
         
-        shops = Array(realm.objects(Shop .self).sorted(byKeyPath: "id", ascending: true))
+        b.text =  game.shops[index].name
         
-        shopImage.image = UIImage(named: shops![index].unlockedImage)
+        f.text = String(game.shops[index].level)
         
-        b.text =  shops![index].name
+        g.text = String(game.shops[index].cost)
         
-        f.text = String(shops![index].level)
-        
-        g.text = String(shops![index].cost)
-        
-        a.text =  String(shops![index].maibyou)
+        a.text =  String(game.shops[index].maibyou)
 
 
         timer = Timer.scheduledTimer(
@@ -103,7 +99,7 @@ class ViewController: UIViewController {
         }
         if user.shozikin >= shops[index].cost {
             let level = shops[index].level + 1
-            let maibyou = level * 3
+            let maibyou = shops[index].maibyou
             let cost = maibyou * 25
             
             try! realm.write() {
@@ -111,6 +107,7 @@ class ViewController: UIViewController {
                 shops[index].level = level
                 user.totalMaibyou = maibyou
                 shops[index].cost = cost
+                shops[index].maibyou += maibyou
             }
             
             

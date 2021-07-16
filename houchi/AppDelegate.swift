@@ -29,10 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if realm.objects(User.self).isEmpty {
            
             
-            Game.setup()
+            Game.shared.setup()
             
         }
-        
+        Game.shared.setup()
         return true
     }
            

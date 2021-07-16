@@ -15,9 +15,12 @@ class Game {
     let realm = try! Realm()
     static let shared = Game()
     
-    func setup() {
+    func start() {
         user = realm.objects(User.self).first!
         shops = Array(realm.objects(Shop.self).sorted(byKeyPath: "id", ascending: true))
+    }
+    
+    func setup() {
         
         
         let realm = try! Realm()
@@ -38,7 +41,7 @@ class Game {
         
         let user = User()
                  
-                 shops[index].totalMabyou = 3
+        user.totalMaibyou = 3
                  
                  try! realm.write() {
                      realm.add(user)
