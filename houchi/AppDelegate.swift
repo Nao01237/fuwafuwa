@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Game.shared.setup()
             
         }
-        Game.shared.setup()
+//        Game.shared.setup()
         return true
     }
            
