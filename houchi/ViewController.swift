@@ -150,7 +150,7 @@ class ViewController: UIViewController {
     @IBAction func prev() {
         index -= 1
         if index < 0 {
-            index = 0
+			index = game.shops.count - 1
         }
         
         b.text = game.shops[index].name
