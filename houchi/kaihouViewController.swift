@@ -20,16 +20,10 @@ class kaihouViewController: UIViewController {
     @IBOutlet var k1: UIButton!
     @IBOutlet var k2: UIButton!
     @IBOutlet var k3: UIButton!
-    
-    var shopNumber: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var shopNumber: Int!
-        
-    
-
         if game.shops[2].level >= 45 {
             shop1.image = UIImage(named: "b")
             shop2.image = UIImage(named: "c")
@@ -95,11 +89,7 @@ class kaihouViewController: UIViewController {
          @IBAction func selectShop2() {
             
             if game.shops[1].level >= 30 {
-                  UserDefaults.standard.removeObject(forKey: "shopNumber")
-                  
-                  shopNumber = 3
-                  UserDefaults.standard.set(shopNumber, forKey: "shopNumber")
-                  
+
                   SCLAlertView().showTitle(
                                 "アンティークショップが解放されたよ！",
                                 subTitle: "新しいお店も繁盛させよう！", timeout: .none,
@@ -128,11 +118,7 @@ class kaihouViewController: UIViewController {
            @IBAction func selectShop03() {
              
             if game.shops[2].level >= 45 {
-                  UserDefaults.standard.removeObject(forKey: "shopNumber")
-                  
-                  shopNumber = 3
-                  UserDefaults.standard.set(shopNumber, forKey: "shopNumber")
-                  
+
                   SCLAlertView().showTitle(
                                 "謎のお店が解放されたよ！",
                                 subTitle: "新しいお店も繁盛させよう！", timeout: .none,

@@ -98,9 +98,9 @@ class ViewController: UIViewController {
             try! realm.write() {
                 game.user.shozikin -= game.shops[index].cost
                 game.shops[index].level = level
-                game.user.totalMaibyou = maibyou
-                game.shops[index].cost = cost
+                game.user.totalMaibyou += maibyou
                 game.shops[index].maibyou += maibyou
+                game.shops[index].cost = cost
             }
             
             
